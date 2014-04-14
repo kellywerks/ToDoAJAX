@@ -1,9 +1,19 @@
 <h1 class="jumbotron">Check List</h1>
 
-<%= link_to "New Task", new_task_path, id: "new_task", remote: true %>
+<%= link_to "New Task", new_task_path, id: "new_link", remote: true %>
 
+<div id='incomplete_tasks'>
+  <h3>Incomplete Tasks</h3>
+  <ul>
+    <% @incomplete_tasks.all.each do |task| %>
+      <li><%= task.name %>: <%= task.done %><%= link_to "update", task_path(task), :class => "btn btn-primary", :method => "patch" %></li>
+    <% end %>
+  </ul>
+</div>
+
+<h3>Complete Tasks</h3>
 <ul>
-  <% @tasks.all.each do |task| %>
+  <% @complete_tasks.all.each do |task| %>
     <li><%= task.name %>: <%= task.done %></li>
   <% end %>
 </ul>

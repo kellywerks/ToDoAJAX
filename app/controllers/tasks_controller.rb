@@ -24,8 +24,24 @@ class TasksController < ApplicationController
 
   def update
     @task = Task.find(params[:id])
-    @task.update(done: true)
-    redirect_to tasks_path
+    if @task.done
+      @task.update(done: false)
+    else
+      @task.update(done: true)
+    end
+    respond_to do |format|
+      format.html { redirect_to tasks_path }
+      format.js
+    end
+  end
+
+  def destroy
+    @task = Task.find(params[:id])
+    @task.destroy
+    respond_to do |format|
+      format.html { redirect_to tasks_path }
+      format.js
+    end
   end
 
   private

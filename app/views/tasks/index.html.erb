@@ -1,0 +1,9 @@
+<h1 class="jumbotron">Check List</h1>
+
+<%= link_to "New Task", new_task_path, id: "new_task", remote: true %>
+
+<ul>
+  <% @tasks.all.each do |task| %>
+    <li><%= task.name %>: <%= task.done %></li>
+  <% end %>
+</ul>

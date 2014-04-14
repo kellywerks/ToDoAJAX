@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: check_list_development
+
+test:
+  adapter: postgresql
+  database: check_list_test

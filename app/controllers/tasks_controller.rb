@@ -10,11 +10,15 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.create(task_params)
-    # redirect_to tasks_path
-    respond_to do |format|
-      format.html { redirect_to tasks_path }
-      format.js
+    @task = Task.new(task_params)
+    if @task.save
+      respond_to do |format|
+        format.html { redirect_to tasks_path }
+        format.js
+      end
+      redirect_to tasks_path
+    else
+      render 'index'
     end
   end
 

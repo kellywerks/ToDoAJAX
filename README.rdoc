@@ -1,8 +1,12 @@
 = Check List
-==Authors:  Kelly Becker and Anne Jhetson
-==Creates a To Do List with Rails, Ruby, PostgreSQL, Capybara, Ajax, Jquery, Javascript, Bootstrap
+Authors:  Kelly Becker and Anne Jhetson
+Creates a To Do List with Rails, Ruby, PostgreSQL, Capybara, Ajax, Jquery, Javascript, Bootstrap
 
 Following Railscast #136
 
-*note: in the process of printing error messages*
+Completed:
+* All CRUD for To Do Items using AJAX
+
+Outstanding Items:
+* Error messaging
 

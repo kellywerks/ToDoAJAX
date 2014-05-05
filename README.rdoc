@@ -1,5 +1,6 @@
 = Check List
 Authors:  Kelly Becker and Anne Jhetson
+
 Creates a To Do List with Rails, Ruby, PostgreSQL, Capybara, Ajax, Jquery, Javascript, Bootstrap
 
 Following Railscast #136
